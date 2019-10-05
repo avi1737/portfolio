@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body,html{
+    margin: 0;
+}
+body{
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size:16px;
+}
+header{
+    display: flex;
+    padding: 1em;
+    justify-content:space-between;
+    z-index: 20px;
+    width: calc(100% - 2em);
+}
+header a{
+    color: black;
+}
+
+a.logo{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+}
+nav ul li{
+    margin: 5px 0;
+}
+ul a{
+    padding: 0.4em;
+    text-decoration: none;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: auto;
+}
+section{
+    padding: 6px;
+}
+section h1,h2,button{
+    text-transform: uppercase;
+}
+.hero{
+    padding-top: 8px;
+    background-image: url(../images/cover.jpg);
+    background-size: cover;
+    height: 300px;
+}
+.hero button{
+    background:rgb(207, 33, 129);
+    padding: 0.5rem;
+    color: white;
+    border: none;
+    outline: 0;
+
+}
+.inner h1{
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+.subscribe{
+    background:white;
+    padding: 14px;
+}
+.subscribe button{
+    color: black;
+    background: white;
+    border: 1px solid gray;
+    padding: 0.5em;
+    font-weight: bold;
+}
+.subscribe .inner ul li{
+    margin: 5px 0px;
+    font-size: 1.4rem;
+}
+.subscribe h2{
+    font-size: 1.9rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+#display{
+    color: white;
+    font-size: 1rem;
+    text-transform: lowercase;
+}
+.whyMe{
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: auto;
+    padding: 3em;
+    grid-gap:40px;
+}
+.skills h1{
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase; 
+}
+.card{
+    text-align: center;
+    color: white;
+    height: 200px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #ee2679;
+}
+.contact{
+    margin-top: 50px;
+    padding: 3rem;
+    background-image: url(../images/cover.jpg);
+    background-size:cover;
+}
+.contact h2{
+    color: white;
+}
+.form-container{
+    text-align: center;
+}
+.form-container input{
+    width: 100%;
+    padding: 0.6rem;
+    border: none;
+    outline: 0;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+.form-container textarea{
+    min-width: 90%;
+    max-width: 90%;
+    min-height: 150px;
+    max-height: 150px;
+    background: #72082c;
+    padding: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+}
+.form-container button{
+    display: inline-block;
+    margin-top: 20px;
+    border: none;
+    background: #ee2679;
+    color: white;
+    padding: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+
+}
+i{
+    color: white;
+    font-size: 20px;
+    margin: 1rem 1rem;
+    padding: 0.6rem;
+    border-radius: 10px;
+}
+.icons-container p{
+    color: white;
+}
+.icons-container{
+    margin: 30px auto;
+    text-align: center;
+}
+i{
+    cursor: pointer;
+    background: white;
+}
+#insta{
+color: rgb(240, 40, 117);
+}
+#fb{
+    color: rgb(34, 107, 243);
+}
+ #linkdn{
+        color: rgb(58, 146, 247);
+ }    
+.about{
+    display: gird;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 3rem;
+}
+.about h2{
+    text-align: center;
+}
+.porfile{
+    width: 100%;
+}
+.img-container img{
+    border-radius: 50%;
+}
+.aboutHead h1{
+    text-align: center;
+    margin-top: 50px;
+}
+.disc p{
+    color: #aaa5a5;
+    line-height: 1.3rem;
+    letter-spacing: 0.1rem;
+}
+
+
+
+
+
+@media only screen and (min-width:768px){
+    .wrapper{
+        grid-template-columns:100% auto;
+        grid-template-rows: 50% auto;
+        grid-template-areas: 
+        "hero subscribe"
+        "hero signup";
+        height: 100vh;
+    }
+    nav ul a{
+        color: white;
+        font-size: 1rem;
+        text-transform: uppercase;
+        display: inline-block;
+        font-weight: bold;
+
+    }
+    nav ul{
+        display: flex;
+        flex-direction: row;
+    }
+    .hamberger{
+        display: none;
+    }
+    .hero{
+        grid-area: hero;
+        background-size: cover;
+        height: 100vh;
+    }
+    .hero h1{
+        font-size: 40px;
+    }
+    section{
+        position: relative;
+    }
+    .inner{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    header{
+      position: absolute;
+      z-index: 1;
+      background:none;
+    }
+    .skills{
+        margin-top: 50px;
+    }
+    .skills h1{
+        text-align: center;
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+    .whyMe{
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr 1fr;
+        grid-template-rows:auto;
+        grid-gap:2em;
+        padding:0 40px;
+        margin: 100px auto;
+    }
+    .card{
+        text-align: center;
+        background: #ee2679;
+        height: 200px;
+        color: white;
+    }
+    a.logo{
+        color: white;
+    }
+    .form-container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        transform: translate(-50%,-50%);
+
+    }
+    .contact{
+        height: 400px;
+        margin-top: 100px;
+        background-image: url(../images/cover.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-gap:50px;
+        
+    }
+    .form-container textarea{
+        min-width: 400px;
+        max-width: 400px;
+        min-height: 150px;
+        max-height: 150px;
+        padding: 1rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        border: none;
+        background: #72082c;
+        color: white;
+        font-size: 1.1rem;
+    }
+
+    .about{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:1fr;
+        width: 900px;
+        margin:0 auto;
+        grid-column-gap:100px;
+        height: 400px;
+    }
+    .aboutHead h1{
+        text-align: center;
+        margin-top: 50px;
+    }
+    .profile{
+        text-align: center;
+        font-size: 18px;
+        color: darkslategrey;
+    }
+    .img-container img{
+        border-radius: 50%;
+        height: 350px;
+        width: 350px;
+    }
+    .disc{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        line-height: 1.3rem;
+        letter-spacing: 0.5rem;
+    }
+    .disc p{
+        background: #cecece;
+        padding: 2rem;
+        color: darkslategrey;
+        clip-path: polygon(0 0,100% 0,90% 100%,0 100%);
+        }
+    .icons-container{
+        margin-top: 200px;
+        margin-left: 100px;
+    }    
+}
+
+.heading{
+    text-align: center;
+    font-size: 22px;
+}
+
+
+
+
+
